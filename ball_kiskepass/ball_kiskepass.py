@@ -1,27 +1,3 @@
-import sys 
-sys.path.append('../')
-from utils import get_center_of_bbox, measure_distance
-
-class ball_kiskepass():
-    def __init__(self):
-        self.max_player_ball_distance = 70
-    
-    def assign_ball_to_player(self,players,ball_bbox):
-        ball_position = get_center_of_bbox(ball_bbox)
-
-        miniumum_distance = 99999
-        assigned_player=-1
-
-        for player_id, player in players.items():
-            player_bbox = player['bbox']
-
-            distance_left = measure_distance((player_bbox[0],player_bbox[-1]),ball_position)
-            distance_right = measure_distance((player_bbox[2],player_bbox[-1]),ball_position)
-            distance = min(distance_left,distance_right)
-
-            if distance < self.max_player_ball_distance:
-                if distance < miniumum_distance:
-                    miniumum_distance = distance
-                    assigned_player = player_id
-
-        return assigned_player
+version https://git-lfs.github.com/spec/v1
+oid sha256:b663a7e4a12baa353e06b119d0f2e00073bddbf21335f37807524bfe0d998b06
+size 956
