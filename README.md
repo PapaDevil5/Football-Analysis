@@ -8,3 +8,13 @@ The goal of this project is to detect and track players, referees, and footballs
 The following modules are used in this project:
 - YOLO: AI object detection model
 - Kmeans: Pixel segmentation and clustering to detect t-shirt color
+
+## Requirements
+To run this project, you need to have the following requirements installed:
+- Python 3.x
+- ultralytics
+- supervision
+- OpenCV
+- NumPy
+- Matplotlib
+- Pandas
